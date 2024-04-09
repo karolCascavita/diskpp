@@ -3,6 +3,10 @@ project(diskpp_diffusion)
 
 set(LINK_LIBS diskpp)
 
+add_executable(consistency_test src/consistency_test.cpp)
+target_link_libraries(consistency_test ${LINK_LIBS})
+install(TARGETS consistency_test RUNTIME DESTINATION bin)
+
 add_executable(consistency src/consistency.cpp)
 target_link_libraries(consistency ${LINK_LIBS})
 install(TARGETS consistency RUNTIME DESTINATION bin)
