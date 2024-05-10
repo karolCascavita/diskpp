@@ -1,3 +1,8 @@
+option(BUILD_APP_VEMASM "Build VEM assembly testing app" ON)
+if (BUILD_APP_VEMASM)
+    add_subdirectory(vemasm)
+endif()
+
 option(BUILD_DISKPP_TUTORIALS "Build DiSk++ tutorials" ON)
 if (BUILD_DISKPP_TUTORIALS)
     add_subdirectory(diskpp_tutorials)
